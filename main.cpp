@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include "employee.h"
 #include "printable.h"
 
 /*
@@ -25,7 +25,7 @@ void printList(const std::vector<Printable *> listToPrint)
     }
 }
 
-int main()
+int main(void)
 {
     // ЗАВДАННЯ:
     // ---------
