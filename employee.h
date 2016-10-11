@@ -8,15 +8,32 @@ using namespace std;
 class Employee : public Printable
 {
 public:
-    std::string name;
-    std::string phoneNumber;
-    std::string address;
-    int salary;
-    int startYearWork;
+    std::string name()
+    {
+        return mName;
+    }
+    std::string phoneNumber()
+    {
+        return mPhoneNumber;
+    }
+    std::string address()
+    {
+        return mAddress;
+    }
 
-    void setEmployee(const std::string &name, const std::string &phoneNumber,
+    int salary()
+    {
+        return mSalary;
+    }
+
+    int startYearWork()
+    {
+        mStartYearWork;
+    }
+
+    /*void setEmployee(const std::string &name, const std::string &phoneNumber,
                      const std::string &address, const int &salary,
-                     const int &startYearWork);
+                     const int &startYearWork);*/
 };
 
 #endif // EMPLOYEE_H
