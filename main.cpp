@@ -60,16 +60,26 @@ int main(void)
     std::vector<Printable *> employeesToPrint;
 
     // Створіть об'єкти Employee та наповніть список тут....
+    Employee* first;
 
-    printList(employeesToPrint);
+    first->setName("John");
+    first->setAddress("Baker str., 42");
+    first->setNumberPhone("066-762-33-23");
+    first->setSalary(300);
+    first->setYearStartWork(2102);
 
-    std::cout << std::endl; // ------------
+    first->print();
+    std::cin.get();
 
-    std::vector<Printable *> officesToPrint;
+   //printList(employeesToPrint);
+
+    //std::cout << printList << std::endl; // ------------
+
+    //std::vector<Printable *> officesToPrint;
 
     // Створіть об'єкти Office та наповніть список тут....
 
-    printList(officesToPrint);
+    //printList(officesToPrint);
 
     return 0;
 }

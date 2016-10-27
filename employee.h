@@ -1,39 +1,45 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-#include "printable.h"
+#include <printable.h>
 #include <string>
-
-using namespace std;
+#include <vector>
+#include <iostream>
 
 class Employee : public Printable
 {
 public:
-    std::string name()
-    {
-        return mName;
-    }
-    std::string phoneNumber()
-    {
-        return mPhoneNumber;
-    }
-    std::string address()
-    {
-        return mAddress;
-    }
+    std::string name();
 
-    int salary()
-    {
-        return mSalary;
-    }
+    void setName(const std::string &name);
 
-    int startYearWork()
-    {
-        mStartYearWork;
-    }
+    std::string numberPhone();
 
-    /*void setEmployee(const std::string &name, const std::string &phoneNumber,
-                     const std::string &address, const int &salary,
-                     const int &startYearWork);*/
+    void setNumberPhone(const std::string &numberPhone);
+
+    std::string address();
+
+    void setAddress(const std::string &address);
+
+    int salary();
+
+    int setSalary (const int &salary);
+
+    int yearStartWork();
+
+    int setYearStartWork (const int &yearStartWork);
+
+
+virtual void print();
+
+
+private:
+    std::string mName;
+    std::string mNumberPhone;
+    std::string mAddress;
+    int mSalary;
+    int mYearStartWork;
+    std::vector <std::string> mPersonalData;
+
 };
 
 #endif // EMPLOYEE_H
