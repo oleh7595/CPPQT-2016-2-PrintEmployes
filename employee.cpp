@@ -4,6 +4,14 @@
 #include <vector>
 #include <iostream>
 
+Employee::Employee(const std::string &name, const std::string &numberPhone, const std::string &address, const int &salary, const int &yearStartWork)
+{
+    mName = name;
+    mNumberPhone = numberPhone;
+    mAddress = address;
+    mSalary = salary;
+    mYearStartWork = yearStartWork;
+}
 
 std::string Employee::name()
 {
@@ -77,12 +85,12 @@ int Employee::setYearStartWork(const int &yearStartWork)
     mYearStartWork = yearStartWork;
 }
 
-void Employee::print()
+void Employee::print() const
 {
-    std::cout << name() << std::endl;
-    std::cout << address() << std::endl;
-    std::cout << numberPhone() << std::endl;
-    std::cout << salary() << std::endl;
-    std::cout << yearStartWork() << std::endl;
-}
+     std::cout << mName << std::endl;
+     std::cout<< mAddress << std::endl;
+     std::cout<< mNumberPhone << std::endl;
+     std::cout << mSalary << std::endl;
+     std::cout<< mYearStartWork << std::endl;
 
+}

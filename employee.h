@@ -8,6 +8,9 @@
 class Employee : public Printable
 {
 public:
+    Employee(const std::string &name, const std::string &numberPhone, const std::string &address,
+             const int &salary, const int &yearStartWork);
+  //  ~Employee();
     std::string name();
 
     void setName(const std::string &name);
@@ -29,7 +32,7 @@ public:
     int setYearStartWork (const int &yearStartWork);
 
 
-virtual void print();
+    virtual void print() const override;
 
 
 private:

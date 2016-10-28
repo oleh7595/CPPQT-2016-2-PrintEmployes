@@ -3,6 +3,7 @@
 #include "employee.h"
 #include "printable.h"
 
+
 /*
  * Функція print друкує інформацію про кожен об'єкт у списку. Ідея полягає у тому, що функція
  * працює з нащадками класу Printable, який є базовим класом для всіх об'єктів, які можуть
@@ -21,7 +22,7 @@ void printList(const std::vector<Printable *> listToPrint)
     for (auto item: listToPrint)
     {
         item->print();
-        std::cout << std::endl;
+        std::cout << "----------------"<< std::endl;
     }
 }
 
@@ -57,21 +58,26 @@ int main(void)
     // та перевизначіть метод print(). У цьому методі виведіть усю доступну про офіс
     // інформацію у консоль.
 
-    std::vector<Printable *> employeesToPrint;
 
+
+   std::vector<Printable *> employeesToPrint;
+
+
+
+
+   employeesToPrint.push_back(new Employee("test", "test", "test", 740, 1987));
+   employeesToPrint.push_back(new Employee("test1", "test1", "tes1t", 7401, 19817));
+
+
+
+    //Employee second("test", "test", "test", 740, 1987);
     // Створіть об'єкти Employee та наповніть список тут....
-    Employee* first;
 
-    first->setName("John");
-    first->setAddress("Baker str., 42");
-    first->setNumberPhone("066-762-33-23");
-    first->setSalary(300);
-    first->setYearStartWork(2102);
+    //Printable *first = new Employee;
+  //  first->print();
+    //std::cin.get();
 
-    first->print();
-    std::cin.get();
-
-   //printList(employeesToPrint);
+   printList(employeesToPrint);
 
     //std::cout << printList << std::endl; // ------------
 
