@@ -4,7 +4,9 @@
 #include <vector>
 #include <iostream>
 
-Employee::Employee(const std::string &name, const std::string &numberPhone, const std::string &address, const int &salary, const int &yearStartWork)
+Employee::Employee(const std::string &name, const std::string &numberPhone,
+                   const std::string &address, const int &salary,
+                   const int &yearStartWork)
 {
     mName = name;
     mNumberPhone = numberPhone;
@@ -85,6 +87,7 @@ int Employee::setYearStartWork(const int &yearStartWork)
     mYearStartWork = yearStartWork;
 }
 
+// New definition of function 'print' for Employee
 void Employee::print() const
 {
      std::cout << mName << std::endl;

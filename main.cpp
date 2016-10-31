@@ -2,6 +2,7 @@
 #include <vector>
 #include "employee.h"
 #include "printable.h"
+#include "office.h"
 
 
 /*
@@ -58,34 +59,40 @@ int main(void)
     // та перевизначіть метод print(). У цьому методі виведіть усю доступну про офіс
     // інформацію у консоль.
 
-
+   std::cout << "<< Employees >>" << std::endl;
 
    std::vector<Printable *> employeesToPrint;
 
-
-
-
-   employeesToPrint.push_back(new Employee("test", "test", "test", 740, 1987));
-   employeesToPrint.push_back(new Employee("test1", "test1", "tes1t", 7401, 19817));
-
-
-
-    //Employee second("test", "test", "test", 740, 1987);
-    // Створіть об'єкти Employee та наповніть список тут....
-
-    //Printable *first = new Employee;
-  //  first->print();
-    //std::cin.get();
+   // Створіть об'єкти Employee та наповніть список тут....
+   employeesToPrint.push_back(new Employee("John", "123-45-67", "Baker str., 42", 740, 1987));
+   employeesToPrint.push_back(new Employee("Gram", "765-43-21", "5-th avenu, 23", 1576, 1988));
 
    printList(employeesToPrint);
 
-    //std::cout << printList << std::endl; // ------------
+   std::cout << "<< Offices >>" << std::endl;
 
-    //std::vector<Printable *> officesToPrint;
+   std::vector<Printable *> officesToPrint;
 
-    // Створіть об'єкти Office та наповніть список тут....
+   // Створіть об'єкти Office та наповніть список тут....
+   officesToPrint.push_back(new Office("Grand", "Lviv, Pasichna str., 39", 1234, 82));
+   officesToPrint.push_back(new Office("New", "Lviv, Zelena str., 129", 450, 64));
 
-    //printList(officesToPrint);
+   printList(officesToPrint);
+
+   //Clearing data
+   for (Printable* item : employeesToPrint)
+   {
+       delete item;
+   }
+
+   employeesToPrint.clear();
+
+   for (Printable* item : officesToPrint)
+   {
+       delete item;
+   }
+
+    officesToPrint.clear();
 
     return 0;
 }

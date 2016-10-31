@@ -10,6 +10,7 @@
  */
 class Printable {
 public:
+    virtual ~Printable(){}
     virtual void print() const = 0;
 };
 
